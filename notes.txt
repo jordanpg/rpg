@@ -1,0 +1,310 @@
+Brackets indicate blocks of thought.
+The opening bracket may have a + for a more major idea, and a - for an expansion on a particular related topic.
+Curly braces indicate 'thoughts on thoughts', put in to help clarify or input commentary on the topic at hand.
+Ideas not are not final and may be modified later on to fit with other ideas or to check scale.
+
+[+NATIONS
+	Nations are groups that own and govern an area of land.
+	These nations are entirely run by players, with a government and economy within.
+	The number of nations would be kept small so that they can grow large and populous.
+
+	[-Players would have goals inside and outside of their nation.
+		Within the nation, players can rise up in power and become a part of the government.
+		Players will be able to provide resources, riches, and glory for their people.
+		Or, they can plot to usurp their leader and force the nation into their own hands.
+
+		As the leader, players have a significant role in the government and economy of the nation.
+		Depending on the type of government, leaders can pass laws, make policy, do diplomacy, provide for the people, provide for themself, and so on.
+		With the right players, government could be a very powerful tool.
+
+		But players can also be exiled from their nation if the government is corrupt, or if the player has made theirself unwelcome.
+		If a player is exiled, they may not be able to return to their nation peacefully, but they may still plot their revenge.
+	]
+
+	[-Players may found their own nations
+		If they are not quite capable of taking over a nation, players may instead choose to amass wealth and create their own.
+		Creating a nation requires great riches and support. Land must be purchased, materials must be obtained, and a capitol must be built.
+		Players must have a certain amount of wealth to their nation before it is recognised officialy.
+		They must have a strong treasury to support the needs of a starting empire, and a strong defence to protect it.
+		Without the proper resources, a nation will fail and crumble, either from debt or from attack.
+
+		Any land under a nation that falls will go to the victor or to nobody, leaving the land unclaimed.
+	]
+
+	[-Players may take over a nation
+		If one or many players decides to launch an attack on a nation, they must be aware of the dangers.
+		An attack may not be launched too close to the capitol. This means players will have to march a distance and protect themselves on the way, giving the leaders time to react.
+		When the players reach the capitol, they must breach its defences and destroy what holds the nation together. This may vary depending on the type of government.
+		Regardless, the war may end in only three ways: peace, surrender, or death.
+
+		The group may also decide to take over from within.
+		This will vary greatly depending on the type of government, and may well be impossible.
+		If players can get enough power in the nation, they can put themselves in a leadership position much more safely, but it will take time.
+	]
+
+	[-Nations can provide for players
+		Belonging to a nation has significant advantages.
+		Nations have wealth independent of the players within it. This wealth comes from the citizens and from trade.
+		Governments may enact policies to redistribute this wealth to the people in various ways.
+		Players may receive extra experience, a big bonus in resources, or even just a big wad of cash.
+
+		Citizens also get access to the services and products provided by the nation.
+		It's beneficial to belong to a large nation that has a lot to offer, but it will put more of a strain on its economy.
+		If the government tries to give more than it has, it will lose money, and it will eventually fail.
+		To counter this, the government may enact taxes or similar policy to try and fund itself, but this may make citizens unhappy.
+
+		Nations may decide to stop accepting new citizens if they cannot support them, or even get rid of ones they have.
+		Just as anything else though, they have to be careful not to make anyone /too/ mad.
+	]
+
+	[-Nations own land
+		Nations must have land. Land is significant to a nation in nearly every aspect.
+		On owned land, nations can build defence, make towns, gather resources, etc.
+		Land costs, but land provides. And every little bit can help.
+	]
+]
+
+[+TECHNOLOGY
+	Nations are responsible for scientific progress through research.
+	Technology is another reason for players to belong to a nation.
+
+	[-Research requires work
+		Goverments may research one tech at a time.
+		Research progress requires time, money, and resources, which must be gathered by citizens.
+		Different techs require different kinds of resources to complete research.
+
+		A tech relating to mining may require citizens to supply rocks and tools.
+		One relating to weaponry may need metals and enemy drops.
+
+		All research will require funding.
+		Citizens can always help out in this regard.
+		Governments can decide not to fund a research project from the treasury.
+		Money does not fund progress. It allows progress to happen.
+		Without money, research will not occur at all, regardless of time or resources.
+		It will cost more money to spend a long time on research, so nations should plan ahead.
+
+		Research cannot be rushed.
+		Regardless of how many riches and supplies have gone into research, time is always a factor.
+	]
+
+	[-Research is worth the effort
+		Researching offers citizens with new tools, armour, weaponry, and benefits.
+		Players can be severely limited by a scientifically inactive nation.
+		Players can only access new tiers if they know how, and they rely on their nation to teach them.
+
+		Nations also benefit from research through new means of defence and war.
+		War is all about being ahead of the curve. You have to make new weaponry to counter new defence, and vice-versa.
+		If a nation neglects research, they leave themselves vulnerable and weak.
+	]
+
+	[-No nation left behind
+		Nations cannot be left in the Dark Ages while another is in space.
+		Nations will get more of a bonus on researching tech that other nations have already gotten.
+		It's easier to catch up, but it's no magic.
+		If a nation is too far behind, it may get tech automatically simply because it's so basic to the modern world.
+		If the world averages in tech equal to the Information era, basic electricity would be a given anywhere.
+
+		Regardless, nations that neglect technology will die off one way or another.
+
+		[-New nations have a chance
+			New nations don't start from square one.
+			Newly founded nations will automatically land somewhere around the average tech level.
+			The founders of the nation may also influence the tech level.
+			The founders' experience levels and tech levels of nations they've been in can increase or decrease their nation's science.
+		]
+	]
+]
+
+[+PROGRESSION
+	Progression on the individual basis must lend to interesting and diverse gameplay.
+	Ideally, diversty would come inherently, rather than being 'implemented'.
+
+	[-Players must have incentive to progress
+		Progression should not be tedious or repetitive.
+		Players must feel like progressing will ultimately give them satisfaction.
+
+		Making milestones and challenges can give players something to work for.
+		Ultimately, players want to perpetuate their fun for as long as possible.
+		
+		[-The player must be presented with things that /feel/ new.
+			Progressing through mining might give player access to deeper levels of caves, with different environments and different dangers.
+			Progressing through blacksmithing could require new interactive smithing methods.
+			Players could learn new combat techniques effective in new situations.
+
+			The player's experience should not be completely predetermined. They should have the freedom to choose what they want to expand, and have some choice in how they want to go about doing so.
+			New mechanics and areas must be designed with this in mind.
+		]
+	]
+
+	[-Progression should never be highly localised.
+		If a player chooses to improve a skill, they should be able to improve other skills at the same time.
+		The most obvious implementation of this idea is having enemies around places where players may improve skills.
+		Another idea is to have entities of other related skills or activities around.
+		For instance, having some smeltery equipment set up near mines.
+		Or having lumber mills near forests for players to sell their wood.
+	]
+
+	[-Progression should be consistent.
+	]
+]
+
+[+ELEMENTS OF PLAYERS
+	Players will have individual basic properties that will govern a wide variety of tasks.
+	Players should not feel like they are locked into one play style or one area of skill, but should still be able to specialise if they want to
+
+	[-Elements may be tuned specifically
+		Players must be able to tune their skills specifically to design their own strategy.
+		This means players must know enough about the elements.
+		For this reason, the amount of elements should be kept low or the application be made more simplistic.
+		If the player feels like they have to deal with too much information, they'll be overwhelmed.
+		If there aren't enough variables for all that's available, things can get too complex.
+	]
+
+	[-Elements must have a degree of independence
+		In order for elements to be meaningful, they must have clear, unique implications associated with them.
+		Ideally, players should not be able to make a decisive comparison on which way or what is better.
+
+		In fact, the preceding point about specialisation should come naturally if this is achieved well.
+	]
+
+	[+THE AFFINITY SPACE
+		The idea of the affinity space is that more meaning is given to choosing a specific playstyle over another.
+		As a player progresses one playstyle, their 'affinity' will shift within the affinity space towards the relevant corner.
+		The affinity space is an element of the combat statistics system.
+
+		[-Affinity would provide special perks and abilities depending on the degree
+			As a player's affinity towards one playstyle increases, they will get more from it.
+			The perks would be relevant to the playstyle; for instance, a ranged affinity might provide a new ranged attack or archer-like ability.
+		]
+
+		[-The affinity space should be flexible
+			A player's position in the space should be based on their progress to individual corners, rather than the space itself.
+			Keeping this in mind will allow for new corners to be added without much conflict, and allow players that choose to specialise to continue without problem.
+
+			[-Player position
+				A player's position in the affinity space is based on their affinity toward every single corner.
+				The opposites and adjacents will ultimately decide where the player stands.
+				For this reason, affinity should not be so direct as "RANGED" and "MAGIC", as this would mislead the player to think affinities are simply how much you use a skill.
+				The corners of the affinity space would not be limited to the skills.
+				These kinds of corners would exist, but they would be 'purist'.
+				Players that mix different kinds of play may find their affinity somewhere in the middle, and will be rewarded as such.
+
+				Indeed, the affinity space fits within a larger, more decisive space that /is/ based explicitly on statistics.
+				This larger space would be the real 'pulling force' that determines where the player stands.
+			]
+		]
+
+		{
+			The affinity space is a rethinking of the signs and aligning systems from the original RPG design thought of.
+			Rather than players deciding a sign and being aligned accordingly, their play decides their position on the wheel.
+			This means that players are less likely to feel like they're making a specialisation decision from the beginning, leaving room for them to make decisions about their play later on.
+
+			The affinity space acts as a sort of dynamic class system. It won't restrict the player's playstyle so strictly, but it provides incentive to stick to one style.
+		}
+	]
+]
+
+[+COMBAT
+	Optimally, combat would be combined between two styles depending on the situation.
+	Turn-based combat would exist for more important battles that a real-time system would make less interesting.
+	Real-time combat would be for places where the player is moving more, or is focused on other things.
+
+	[+TURN-BASED COMBAT
+		Turn-based combat must be deterministic in nature.
+		Any degree of randomness in play must be manageable or mild enough to not need management.
+		Players have to be able to make informed decisions about their moves and strategise accordingly.
+
+		[-Advantages of turn-based combat
+			Turn-based combat allows for players to feel like they can easily manage every element of the battle.
+			It allows players to think more strategically, and use a different kind of skill than a real-time combat system.
+		]
+
+		[-Disadvantages of turn-based combat
+			Turn-based combat takes a lot more time. Because of this, it should be used in places where it makes sense to spend time.
+			Players shouldn't have to waste their time if there's no way they can't win.
+			Turn-based combat should be used more sparingly because of its slow-paced nature.
+		]
+
+		[+ELEMENTS OF COMBAT
+			The elements involved in resolving combat outcomes should be straightforward and easy to understand.
+			Players are limited on time, and in some cases, waiting on each other, so it shouldn't take too long to figure out what to do.
+
+			[-The elements must directly lend to determinism.
+				There must be a clear way to solve that stat A will be directly affected by stat B to get outcome X.
+				Randomness should come into play only to help solve cases where the direct effect of stats cannot solve to an outcome.
+
+				In combat, the things that must be solved for go in a clear order:
+					1) Can we hit this thing?
+					2) What will hitting this thing do?
+					3) How significant will these effects be?
+
+				In a plain battle situation, the first step is as simple as comparing accuracy to evasion.
+				This is one case where randomness may need to be inherent, but there should still be an absolution state.
+				Other than that, the rest would be up to proper balance.
+
+				To figure out what effect doing a thing will have, you look at all the factors that influence that thing.
+				This can vary, but the basic idea is simple. You just have to look at the attack, the attacker, and the attacked together and factor in all the relevant effects.
+
+				Figuring the significance of the move is similar to the last step.
+				You look at the effects on the three acting elements and crunch the numbers.
+				For a basic hit, it may be as simple as just taking the attack power and subtracting the effect of defence.
+				When you get into buffs and effectiveness, all you need to do is multiply these values accordingly.
+			]
+
+			[-The elements must be manipulated
+				All this means is that players have to be able to manipulate the numbers so they can incorporate that into their grand strategy.
+				This is nothing new, and the implementation is very simple.
+				There are buffs and debuffs, and players can apply them to mess with the numbers and make the battle more interesting.
+
+				However, the game must do this innately as well.
+				The game must have simple factors that the player has to think of so they can most effectively deal with their foes.
+
+				{
+					In our case, we're achieving this with something that ties into the affinity space we talked about earlier.
+					Every corner on the statistics space must have an opposite. These opposites are relevant to more than just space positioning.
+
+					Basically, you're dealing with a simple "rock beats scissors, paper beats rock" factoring system that the player can easily understand during battle.
+					There's no need for them to see the numbers for this, but they need to know what they're most effective against, and what they'll get GG'd by.
+				}
+			]
+		]
+	]
+
+	[+REAL-TIME COMBAT
+		Real-time combat is more action-oriented.
+		It relies on the skill of the player to execute combat, rather than the skill of the player to use it.
+		The choices the player makes are much less 'tamable' than in a turn-based combat system, so the taming should be kept very low.
+		{
+			We don't need to talk so much about real-time combat design here since the system is already in place, so let's just make sure we know what we /can/ improve.
+			We can make more interesting weapons.
+			We can make more satisfying effects.
+			We can make sure the player is satisfied after finishing.
+		}
+
+		[-Advantages of real-time combat
+			Real-time combat keeps the game going at a faster pace.
+			If a player is walking around, they can easily and quickly dispatch an enemy, then continue.
+			This flow is important to maintain in some situations and so real-time combat is a good idea to keep in Blockland.
+		]
+
+		[-Disadvantages of real-time combat
+			Real-time combat is less manageable. You cannot determine the outcome or mess with the numbers past the damage values.
+			You can't really control the pace of the individual battle. It all comes down to power and if the player can aim.
+		]
+	]
+
+	{ On combining styles
+		The solution may actually be much simpler than it may seem.
+		You can look at the systems in more ways than just "style A" and "style B".
+
+		To combine the styles, you think of how each style can be used to emphasise an effect, or to provide a well-timed variation in play.
+
+		Turn-based combat can be put in to make a fight appear much more grandiose.
+		Placing these battles strategically can let you really harness this and make the player feel a sense of epicness, that the battle is more meaningful than others.
+		(Obviously, you need to match this with supplying significant reward, making sure the battle type isn't too common, et cetera)
+
+		Real-time combat doesn't force as much engagement on the player, so it can be nicely placed anywhere the player is engaged in something else.
+		If the player is busy mining, they probably shouldn't have a turn-based engagement unless it's something the player would /want/ to shift their attention to.
+	}
+	
+]
