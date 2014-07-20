@@ -13,3 +13,11 @@ datablock PlayerData(PlayerDumbAI : PlayerStandardArmor)
 
 	aiBehaviours = 3;
 };
+
+datablock PlayerData(PlayerButtAI : PlayerDumbAI)
+{
+	aiBehaviour3 = bAButt;
+	aiBehaviourArg3_0 = 3;
+
+	aiBehaviours = 4;
+};

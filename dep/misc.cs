@@ -111,3 +111,23 @@ function getRollAngle(%trans)
 	%z = mAbs(getWord(%euler, 1));
 	return mFloatLength(%z, 3);
 }
+
+function SimGroup::hasNTObject(%bg, %nt)
+{
+	for(%i = 0; %i < %bg.NTNameCount; %i++)
+	{
+		if(%bg.NTName[%i] $= %nt)
+			return %i;
+	}
+	return -1;
+}
+
+function SimGroup::ntCall(%bg, %nt, %func, %a1, %a2, %a3, %a4, %a5, %a6, %a7, %a8, %a9, %a10)
+{
+	if(!isObject(%bg))
+		return false;
+	if(%bg.hasNTObject(%nt) $= -1)
+		return;
+	for(%i = 0; %i < %bg.NTObjectCount[%nt]; %i++)
+		%bg.NTObject[%nt, %i].call(%func, %a1, %a2, %a3, %a4, %a5, %a6, %a7, %a8, %a9, %a10);
+}

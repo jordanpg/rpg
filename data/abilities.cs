@@ -4,6 +4,9 @@ new ScriptObject(TestAbility)
 {
 	class = "RPGAbility";
 
+	abilityCooldown = 1;
+	abilityName = "Test";
+
 	phase0 = "Init";
 	phaseCall0 = true;
 	phaseTime0 = 0;
@@ -46,6 +49,9 @@ if(isObject(SwordSpinAbility))
 new ScriptObject(SwordSpinAbility)
 {
 	class = "RPGAbility";
+
+	abilityCooldown = 1;
+	abilityName = "Spin Attack";
 
 	phase0 = "Init";
 	phaseCall0 = true;
@@ -108,7 +114,7 @@ function SwordSpinAbility::Action(%this, %obj, %slot)
 		if(nameToID(%o) == nameToID(%obj))
 			continue;
 
-		if(minigameCanDamage(%obj, %o) == 1 && $Sim::Time - %o.aSpinLast > $RPG::Ability::SwordSpinDamageTimeout)
+		if(rpgCanDamage(%obj, %o) == 1 && $Sim::Time - %o.aSpinLast > $RPG::Ability::SwordSpinDamageTimeout)
 		{
 			%o.damage(%obj, %o.getTransform(), $RPG::Ability::SwordSpinDamage, $DamageType::SwordSpin);
 			%o.aSpinLast = $Sim::Time;

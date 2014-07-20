@@ -4,12 +4,20 @@ function RPGAbility::aActivate(%this, %obj, %slot)
 		return false;
 
 	%id = nameToID(%this);
+
+	if($Sim::Time <= %obj.aCooldownEnd[%id] || %obj.aCooldownEnd[%id] < 0)
+	{
+		%this.onCooldownFail(%obj, %slot);
+		return;
+	}
+
 	if(isObject(%ability = %obj.getActiveAbility(%slot)))
 		%ability.aDeactivate(%obj, %slot);
 
 	%obj.ability[%slot] = %id;
 	%obj.abilityPhase[%slot] = 0;
 	%obj.abilitySlot[%id] = %slot;
+	%obj.setAbilityCooldown(%this, %this.abilityCooldown);
 
 	%this.aPhase(%obj, 0);
 
@@ -20,7 +28,7 @@ function RPGAbility::aActivate(%this, %obj, %slot)
 
 function RPGAbility::aDeactivate(%this, %obj, %slot)
 {
-	if(!isObject(%obj) || (%obj.getClassName() !$= "Player" && %obj.getClassName() !$= "AIPlayer")) //do we even need AI to do this? i guess so.
+	if(!isObject(%obj) || (%obj.getClassName() !$= "Player" && %obj.getClassName() !$= "AIPlayer"))
 		return false;
 
 	%id = nameToID(%this);
@@ -182,6 +190,30 @@ function RPGAbility::onInactive(%this, %obj, %slot)
 	//pass
 }
 
+function RPGAbility::onCooldownFail(%this, %obj, %slot)
+{
+	if(%this.debug || %obj.rpgDebug)
+		echo("Ability uncool -" SPC %this SPC "on" SPC %obj SPC "in slot" SPC %slot);
+
+	//pass
+}
+
+function RPGAbility::onCooldownEnd(%this, %obj, %slot)
+{
+	if(%this.debug || %obj.rpgDebug)
+		echo("Ability cooled -" SPC %this SPC "on" SPC %obj SPC "in slot" SPC %slot);
+
+	//pass
+}
+
+function RPGAbility::onCooldownStart(%this, %obj, %slot, %time)
+{
+	if(%this.debug || %obj.rpgDebug)
+		echo("Ability heated -" SPC %this SPC "on" SPC %obj SPC "in slot" SPC %slot SPC "for" SPC %time SPC "seconds");
+
+	//pass
+}
+
 function isValidAbility(%obj)
 {
 	if(!isObject(%obj))
@@ -200,9 +232,46 @@ function Player::activateAbility(%this, %obj, %slot)
 {
 	if(!isValidAbility(%obj))
 		return false;
+
+	return %obj.aActivate(%this, %slot);
 }
 
 function Player::getActiveAbility(%this, %slot)
 {
 	return (isObject(%this.ability[%slot]) ? %this.ability[%slot] : -1);
+}
+
+function Player::getAbilitySlot(%this, %obj)
+{
+	if(!isValidAbility(%obj))
+		return -1;
+
+	%id = nameToID(%obj);
+
+	%slot = %this.abilitySlot[%id];
+	if(%slot !$= "")
+		return %slot;
+
+	return -1;
+}
+
+function Player::setAbilityCooldown(%this, %obj, %time, %slot)
+{
+	if(!isValidAbility(%obj))
+		return false;
+
+	%id = nameToID(%obj);
+
+	if(%slot $= "")
+		%slot = %this.getAbilitySlot(%id);
+
+	%this.aCooldownStart[%id] = $Sim::Time;
+	%this.aCooldownEnd[%id] = (%time > 0 ? $Sim::Time + %time : -1);
+
+	if(%time > 0)
+		%this.aCooldown[%id] = %obj.schedule(%time * 1000, onCooldownEnd, %this, %slot);
+
+	%obj.onCooldownStart(%this, %slot, %time);
+
+	return true;
 }

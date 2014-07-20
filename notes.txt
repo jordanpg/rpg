@@ -1,6 +1,8 @@
 Brackets indicate blocks of thought.
 The opening bracket may have a + for a more major idea, and a - for an expansion on a particular related topic.
 Curly braces indicate 'thoughts on thoughts', put in to help clarify or input commentary on the topic at hand.
+Hashes around a thought means that it's expanded on later and no longer relevant.
+Parenthesis are for other things like pseudocode or whatever idk
 Ideas not are not final and may be modified later on to fit with other ideas or to check scale.
 
 [+NATIONS
@@ -307,4 +309,129 @@ Ideas not are not final and may be modified later on to fit with other ideas or 
 		If the player is busy mining, they probably shouldn't have a turn-based engagement unless it's something the player would /want/ to shift their attention to.
 	}
 	
+	{ Some newer thoughts
+		Implementing turn-based combat may not be the best idea. At least, it shouldn't be implemented right away.
+		Most likely, it should probably be introduced in a minigame or something before being a part of the game.
+		Making real-time combat interesting solves the problem that adding turn-based would address, and so it would be a redundancy and probably end up being more of a design nightmare than anything else.
+
+		It will be much simpler for development and for players to only have real-time combat, especially considering the Blockland environment.
+
+		So now I'll revisit the topic of combat in a new block.
+	}
+]
+
+[+COMBAT REVISITED
+	In a real-time RPG combat system, you must figure out how to tie the RPG elements into the design of fighting mechanics.
+	Obviously, this requires a rework of the combat systems currently in place in Blockland.
+
+	[-Dynamic classing
+		Having a non-class-based progressison model means we have to account for players wanting to try something new, and welcome them doing so (not rewarding them for doing so, as that would concflict with the affinity space idea).
+
+		Players will inevitably end up doing some catching-up if they decide to switch playstyles. This is fine, as the player will probably expect this, but it shouldn't feel like starting over if they've made significant progress in another style of combat.
+
+		[
+			We need to think of a general comparison between fighting styles that we can make to provide us with clear answers on what statistics they would rely on.
+			Perhaps a simple way to look at this is, "What human qualities must be honed to be most effective at this particular combat style?"
+			For example, a ranger of any sort must be significantly more accurate. A melee user must be strong.
+
+			This runs into a wall once you get into fantastical elements, so it may not be the best mindset on its own.
+
+			[
+				# What would a summoner need? For magic, you'd imagine it would be the same as any other kind. For material, it would be a feat of engineering. #
+
+				We must acknowledge that magic and material approaches to the same combat style will differ.
+				This is a good thing for diversity in play and in design.
+
+				A magic user will always require more focus.
+				A material user will always require more strength.
+				This is not to say that there would be exclusive statistics, but the factoring would certainly differ.
+			]
+		]
+
+		{
+			An answer to all of this is that the progression of styles should lie in the abilities relevant to them, not in their statistics. The statistics behind combat should not be the primary focus.
+
+			Players may well be responsible for the statistics themselves, and so the effects of them should be plain and simple.
+			Putting more points into strength will obviously make you hit harder.
+			Putting more points into accuracy makes you hit better.
+
+			Ranged combat styles wouldn't factor in strength so much (depending on the weapon type?)
+
+			Summoning is an interesting case. Maybe it should be a special combat style?
+			The effectiveness of summoning seems to be silly to put anywhere other than in the ability itself, or possibly in crafting quality.
+			Really, I suppose it would be fairly ridiculous as an individual combat style.
+			Summoning would probably be an item-based style. This'll add some neat skills like engineering to craft them as well.
+			So really, the progression of summoning would be entirely non-combat. 
+		}
+	]
+
+	[-Using the numbers
+		Anything except a function call to deal damage would get insane quickly.
+		It's absolutely necessary that all damage be dealt with similarly enough so that they can be dealt with in a fairly simplistic fashion.
+
+		There must be a consistent theme in how damage is processed:
+			1. Check that we /will/ do damage
+			2. Figure out /how much/ damage
+			3. Apply any and all damage we've decided to do
+
+		The process would look something like this:
+		(
+			(
+				Get the player's accuracy with their current weapon
+				Get the enemy's evasion chance
+
+				Check the probability and figure out if we hit...
+			)
+			Did we hit?
+				no: Hit missed, deal no damage and do whatever other stuff.
+				yes: Continue on.
+
+			(
+				Calculate the player's hit power with their current weapon
+				Calculate the enemy's defence rating
+
+				Do some math with the two numbers to get the damage number(s)...
+			)
+			Deal all the damage.
+		)
+
+		{
+			Need to be sure that accuracy is handled well, because it'll be really frustrating to hit an enemy a lot of times and not deal any damage.
+			Maybe the idea of accuracy should be rethought?
+
+			{ TECHNICAL SHIZZLEWIZZLE
+
+				Rather than having damage types for every attack, perhaps we should just have damage types for every /type/ of attack?
+				For specific attacks, we can maybe just make a function that'll set some extra variables for us to use.
+				e.g. registerRPGDamage("SwordSpin", "PHYSMELEE")
+
+				We probably also need to have a method for attacks to alter the numbers on their own in a simple way.
+				Possibly we could do a simple set of fields with defence types and an operation
+				e.g. 	"MAGIC *1.5" would do 1.5x more damage to magic armour
+						"SUMMONED +50" would do +50 damage to summoned mobs
+				So, we need to have a list of these tags for each damagable entity. This should be fairly simple, though.
+				Every time effects are changed, we add/remove the relevant tag(s).
+
+				We can also have a similar tag system for attack power.
+				The beauty of this is that we can just combine all this into two lists: one for the attacker, one for the defender.
+
+				We can also add in some special operations if we want to add effects that do things like reflect damage or apply debuffs.
+
+				So we have three ways to alter combat from this system:
+				
+				1) 	The character tags which list properties applying to the entity. These will probably be mostly static, and have no operators associated with them.
+					e.g. PLAYER, AI, SUMMONED, etc.
+
+				2)	The defence tags which list effects that apply to damage that the entity receives.
+					This would be used for things such as armour or buffs. The type of each tag would be the type that it defends against.
+					e.g. ALL /50, MAGIC *0.5, RANGED +10
+
+				3)	The attack tags which list effects that apply to the damage that the entity deals.
+					This would be used in things like attack types and weapons. The type of each tag would be the type it alters damage for.
+					e.g. MAGIC *1.5, SUMMONED +50, ALL *2
+
+				It'll definitely be necessary to have some operators for control.
+			}
+		}
+	]
 ]

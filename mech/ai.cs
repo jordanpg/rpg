@@ -303,14 +303,6 @@ function AIPlayer::RPG_onActivate(%this, %obj, %ray)
 
 package RPG_AI
 {
-	function minigameCanDamage(%obj, %obj2)
-	{
-		if(%obj2.rpgAI)
-			return $RPG::Enabled > 0;
-
-		return parent::minigameCanDamage(%obj, %obj2);
-	}
-
 	function Armor::onRemove(%this, %obj)
 	{
 		if(%obj.rpgAI)
@@ -477,4 +469,20 @@ function AIPlayer::bEmoteSpam(%this)
 	}
 
 	%this.bEmoteReady = true;
+}
+
+function AIPlayer::bAButt(%this, %radius)
+{
+	initContainerRadiusSearch(%this.getPosition(), %radius, $TypeMasks::PlayerObjectType);
+	%us = nameToID(%this);
+	while(isObject(%obj = containerSearchNext()))
+	{
+		if(rpgCanDamage(%this, %obj) != 1 || nameToID(%obj) == %us)
+			continue;
+		%found = true;
+		break;
+	}
+
+	if(%found)
+		%this.activateAbility(SwordSpinAbility, 0);
 }

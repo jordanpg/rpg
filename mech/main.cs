@@ -6,3 +6,4 @@ exec("./mapgen.cs");
 exec("./player.cs");
 exec("./ai.cs");
 exec("./ability.cs");
+exec("./combat.cs");
