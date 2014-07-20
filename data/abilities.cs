@@ -36,7 +36,7 @@ function TestAbility::Action(%this, %obj, %slot)
 
 
 
-addDamageType("SwordSpin", 'rip %1', '%2 cut %1', 0.2, 1);
+addRPGDamageType("Sword Spin", $DamageType::RPGMaterial, "MATERIAL	AoE	SPECIAL	SWORD	MELEE	MATMELEE");
 
 $RPG::Ability::SwordSpinCt = 2;
 $RPG::Ability::SwordSpinStep = 15;
@@ -68,6 +68,9 @@ new ScriptObject(SwordSpinAbility)
 
 function SwordSpinAbility::Init(%this, %obj, %slot)
 {
+	if(isObject(%obj.aShape[%slot]))
+		%obj.aShape[%slot].delete();
+
 	%obj.aShape[%slot] = new StaticShape()
 							{
 								datablock = RPGSwordShapeData;
@@ -116,7 +119,7 @@ function SwordSpinAbility::Action(%this, %obj, %slot)
 
 		if(rpgCanDamage(%obj, %o) == 1 && $Sim::Time - %o.aSpinLast > $RPG::Ability::SwordSpinDamageTimeout)
 		{
-			%o.damage(%obj, %o.getTransform(), $RPG::Ability::SwordSpinDamage, $DamageType::SwordSpin);
+			rpgDamage(%obj, %o, $RPG::Ability::SwordSpinDamage, "Sword Spin");
 			%o.aSpinLast = $Sim::Time;
 		}
 	}

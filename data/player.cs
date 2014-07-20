@@ -12,6 +12,8 @@ datablock PlayerData(PlayerDumbAI : PlayerStandardArmor)
 	aiBehaviour2 = bEmoteSpam;
 
 	aiBehaviours = 3;
+
+	aiCall_Death = true;
 };
 
 datablock PlayerData(PlayerButtAI : PlayerDumbAI)
@@ -21,3 +23,11 @@ datablock PlayerData(PlayerButtAI : PlayerDumbAI)
 
 	aiBehaviours = 4;
 };
+
+function PlayerDumbAI::RPG_onDeath(%this, %obj, %killer, %data, %pos, %dam, %type)
+{
+	RPGAI_New(PlayerDumbAI);
+
+	if(isObject(%killer.client))
+		%killer.client.bottomPrint("\c6Shame on you. He wasn\'t hurtin\' nobody. :(", 3, 1);
+ }

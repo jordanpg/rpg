@@ -14,3 +14,5 @@ function RPG_Load()
 	exec("./mech/main.cs");
 }
 RPG_Load();
+
+$RPG::Enabled = true;

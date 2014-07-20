@@ -44,6 +44,8 @@ function RPGDataGroup::addPlayer(%this, %client, %noimport)
 	%data.brickGroup.rpgData = %data;
 	%this.add(%data);
 
+	%data.applyInventory($RPG::Inventory::BaseSlots);
+
 	if(!%noimport)
 	{
 		%r = %data.import();

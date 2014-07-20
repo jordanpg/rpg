@@ -1,9 +1,10 @@
-exec("./outfit.cs");
-exec("./turnbased.cs");
+exec("./combat.cs");
+// exec("./turnbased.cs");
+exec("./inventory.cs");
 exec("./data.cs");
 exec("./angmen.cs");
 exec("./mapgen.cs");
 exec("./player.cs");
+exec("./outfit.cs");
 exec("./ai.cs");
 exec("./ability.cs");
-exec("./combat.cs");

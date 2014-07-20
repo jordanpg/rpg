@@ -131,3 +131,46 @@ function SimGroup::ntCall(%bg, %nt, %func, %a1, %a2, %a3, %a4, %a5, %a6, %a7, %a
 	for(%i = 0; %i < %bg.NTObjectCount[%nt]; %i++)
 		%bg.NTObject[%nt, %i].call(%func, %a1, %a2, %a3, %a4, %a5, %a6, %a7, %a8, %a9, %a10);
 }
+
+// function simpBrick(%db, %pos, %client, %colour, %angle, %print)
+// {
+// 	%brick = new fxDTSBrick()
+// 			{
+// 				datablock = %db;
+// 				position = %pos;
+// 				rotation = angleToRot(%angle);
+
+// 				angleID = %angle;
+// 				colorID = %colour;
+// 				colorFXID = 0;
+// 				shapeFXID = 0;
+// 				brickGroup = %client.brickGroup;
+// 				client = %client;
+// 				printID = (%printID !$= "" ? %printID : 85);
+
+// 				isBaseplate = true;
+// 				isPlanted = true;
+// 			};
+// 	%brick.schedule(0, plant);
+// 	%brick.brickGroup.add(%brick);
+// }
+
+// function drawSphere(%origin, %r, %m, %n)
+// {
+// 	%end = %n-1;
+// 	for(%m0 = 0; %m0 <= %m; %m0++)
+// 	{
+// 		%m1 = mSin($pi * %m0 / %m);
+// 		%m2 = mCos($pi * %m0 / %m);
+
+// 		for(%n0 = 0; %n0 <= %end; %n0++)
+// 		{
+// 			%n1 = mCos(2 * $pi * %n0 / %n);
+// 			%n2 = mSin(2 * $pi * %n0 / %n);
+
+// 			%pos = %r * (%m1 * %n1) SPC %r * (%m1 * %n2) SPC %r * %m2;
+
+// 			simpBrick(Brick4xCubeData, VectorAdd(%origin, %pos), localClientConnection, 0, 0);
+// 		}
+// 	}
+// }
